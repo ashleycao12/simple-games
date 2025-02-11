@@ -20,7 +20,8 @@ function Hangman() {
     setAlphabet(alphabetObjs)
     
     //get random word from api
-    const randomWord = await getRandomWord()
+    const randomWordArray = await getRandomWord()
+    const randomWord = randomWordArray[0]
     const letterArr = randomWord.split('')
     setLetters(letterArr)
 
